@@ -1,4 +1,4 @@
-todoApp.service('TodoService', function($http, $q) {
+/*todoApp.service('TodoService', function($http, $q) {
   return {
     'getTodos': function() {
       var defer = $q.defer();
@@ -29,3 +29,4 @@ todoApp.service('TodoService', function($http, $q) {
     }
   };
 });
+*/

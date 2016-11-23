@@ -21,7 +21,7 @@ hangApp.controller('mainCtrl', function($scope) {
 });
 
 
-todoApp.controller('TodoCtrl', ['$scope', '$rootScope', 'TodoService', function($scope, $rootScope, TodoService) {
+/*todoApp.controller('TodoCtrl', ['$scope', '$rootScope', 'TodoService', function($scope, $rootScope, TodoService) {
   $scope.formData = {};
   $scope.todos = [];
 
@@ -41,4 +41,4 @@ todoApp.controller('TodoCtrl', ['$scope', '$rootScope', 'TodoService', function(
       $scope.todos.splice($scope.todos.indexOf(todo), 1);
     });
   };
-}]);
+}]);*/
