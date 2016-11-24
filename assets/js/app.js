@@ -9,7 +9,7 @@
         templateUrl: '/templates/home.html',
         controller: 'mainCtrl'
       })
-      .when('/play', {
+      .when('/play/:pName', {
         templateUrl : 'templates/play.html',
         controller  : 'playCtrl'
       })

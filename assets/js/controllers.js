@@ -24,13 +24,17 @@
   };
 
   var mainCtrl = function($scope, $location) {
-    $scope.message = 'Hola, Mundo!';
+    //$scope.name = '';
     $scope.go = function ( path ) {
-      $location.path( path );
+      $location.path( path + '/'+$scope.name );
     };
   };
 
-  var playCtrl = function($scope, Word) {
+  var playCtrl = function($scope, $routeParams, Word) {
+    if(!$routeParams.pName){
+      $location.path( '#/' );
+    }
+    $scope.player = $routeParams.pName;
 
     //$scope.wordsBd = Word.query();
     $scope.wordsBd = '';

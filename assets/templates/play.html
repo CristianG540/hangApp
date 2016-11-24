@@ -23,7 +23,7 @@
 
         <p>
           <span ng-hide="win || lost">You have {{ missesAllowed - numMisses }} guesses remaining.</span>
-          <span ng-show="win">Well done!</span>
+          <span ng-show="win">We have a WINNER! <strong>{{player}}</strong> Well done!</span>
           <span ng-show="lost">Sorry, please try again!</span>
         </p>
       </div>
