@@ -30,7 +30,8 @@
     };
   };
 
-  var playCtrl = function($scope, $routeParams, Word) {
+  var playCtrl = function($scope, $location, $routeParams, Word) {
+
     if(!$routeParams.pName){
       $location.path( '#/' );
     }
@@ -42,8 +43,14 @@
     Word.query().$promise.then(
       //Success
       function (data) {
-        $scope.wordsBd = data;
-        $scope.reset();
+
+        if(data.length <= 0){
+          $location.path( '/addWord' );
+        }else{
+          $scope.wordsBd = data;
+          $scope.reset();
+        }
+
       },
       //Error
       function (error) {
